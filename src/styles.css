@@ -1,0 +1,248 @@
+
+*{
+  margin:0;
+  padding:0;
+  /* box-sizing: border-box; */
+}
+
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: auto;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+.header{
+  width: 100vw;
+  height: 15vh;
+  display: flex;
+  justify-content: space-around; 
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+
+
+
+.searchPart{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-radius: 6px;
+  width: 500px;
+}
+
+.searchPart:hover{
+  box-shadow: 2px 2px 10px rgb(14, 72, 233);
+}
+.searchPart img{
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+
+}
+#inputPart{
+  outline: none;
+  border:none;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 6px;
+  width: 500px;
+}
+
+.component{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
+
+
+.card{
+  width: 290px;
+  height: 440px;
+  display: flex;
+  flex-direction: column;
+  border : 2px solid gray;
+  /* justify-content: center; */
+  align-items: center;
+  margin: 20px;
+  box-shadow: 6px 6px 15px black;
+}
+
+.card:hover{
+
+  background-image: linear-gradient( rgb(116, 110, 110),rgb(188, 228, 240));
+  cursor: pointer;
+}
+
+.desc{
+  width: 290px;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+
+img{
+  width: 280px;
+  height: 280px;
+  margin: 5px 0;
+}
+
+h1{
+  margin-bottom: 10px;
+  }
+
+  h3{
+    margin-top: 8px;
+  }
+
+  /* media  queries */
+
+  @media only screen and (max-width: 850px)
+  {
+      .searchPart{
+        width: 600px;
+    }
+
+    #inputPart{
+      padding: 10px;
+      font-size: 20px;
+      width: 500px;
+    }
+    
+  }
+
+
+   @media only screen and (max-width: 800px)
+  {
+      .searchPart{
+        width: 500px;
+    }
+
+    #inputPart{
+      padding: 10px;
+      font-size: 20px;
+      width: 400px;
+    }
+ 
+  }
+
+
+   @media only screen and (max-width: 700px)
+  {
+      .searchPart{
+        width: 400px;
+    }
+
+    #inputPart{
+      padding: 10px;
+      font-size: 20px;
+      width: 350px;
+    }
+
+  }
+
+  @media only screen and (max-width: 600px)
+  {
+      .searchPart{
+        width: 350px;
+    }
+
+    #inputPart{
+      padding: 10px;
+      font-size: 20px;
+      width: 300px;
+    }
+  }
+
+
+@media only screen and (max-width: 520px)
+  {
+      .searchPart{
+        width: 300px;
+    }
+
+    #inputPart{
+      padding: 10px;
+      font-size: 20px;
+      width: 200px;
+    }
+
+    #movieLand{
+      font-size: 20px;
+    }
+  }
+
+@media only screen and (max-width: 450px)
+  {
+      .searchPart{
+        width: 280px;
+    }
+
+    #inputPart{
+      padding: 5px;
+      font-size: 10px;
+      width: 180px;
+    }
+
+
+    #movieLand{
+      font-size: 20px;
+    }
+  }
+
+  @media only screen and (max-width: 400px)
+  {
+      .searchPart{
+        width: 180px;
+    }
+
+    #inputPart{
+      padding: 10px;
+      font-size: 10px;
+      width: 120px;
+    }
+
+    #movieLand{
+      font-size: 10px;
+    }
+  }
+
+
+
+@media only screen and (max-width: 320px)
+  {
+      .searchPart{
+        width: 150px;
+    }
+
+    #inputPart{
+      padding: 5px;
+      font-size: 10px;
+      width: 90px;
+    }
+    #searchBtn{
+      padding: 5px;
+      width: 70px;
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    #movieLand{
+      font-size: 10px;
+    }
+  }
