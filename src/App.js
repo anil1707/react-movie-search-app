@@ -1,11 +1,14 @@
 import "./styles.css";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import MovieCard from "./MovieCard";
+import MovieInfo from "./MovieInfo";
+
 import icon from './icon3.png'
 export const API_KEY = "ae719e56";
 export default function App() {
-  const [name, setName] = useState("spider");
   const [list, setList] = useState([]);
+  const [timeoutId, updateTimeout] = useState();
+  const [movieInfo, onMovieSelect] = useState();
 
   async function searchMovie(name) {
     const data = await fetch(
@@ -13,14 +16,14 @@ export default function App() {
     );
     const actualData = await data.json();
     setList(actualData.Search);
-    // console.log(actualData);
   }
 
-  useEffect(() => {
-    searchMovie(name);
-  }, [name]);
   function inputHandler(e) {
-    setName(e.target.value);
+    clearTimeout(timeoutId);
+    const timeout = setTimeout( ()=>{
+      return searchMovie(e.target.value);
+    }, 500);
+    updateTimeout(timeout);
   }
 
   return (
@@ -33,19 +36,18 @@ export default function App() {
             id="inputPart"
             placeholder="Search here"
             type="text"
-            value={name}
             onChange={inputHandler}
           />
           
         </div>
       </div>
+      {movieInfo && <MovieInfo movieInfo={movieInfo} onMovieSelect={onMovieSelect} />}
       <div className="component">
         {list?.length > 0 ? (
           <>
             {
               list.map((item, index) => (
-                <MovieCard movie={item} key={index}  />
-
+                <MovieCard movie={item}  key={index} onMovieSelect={onMovieSelect} />
               ))
             }
           </>
