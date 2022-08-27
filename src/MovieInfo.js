@@ -17,23 +17,29 @@ function MovieInfo(props)
     return (
         <>
             {
-                movieData ? <><div className='infoContainer'>
-            <img src={movieData?.Poster} alt="Poster" />
-            <div className='subData'>
-                <h1>Name :{movieData?.Title}</h1>
-                <p>IMDB Rating: {movieData?.imdbRating}</p>
-                <p>Year: {movieData?.Year}</p>
-                <p>Laungage: {movieData?.Language}</p>
-                <p>Rated: {movieData?.Rated}</p>
-                <p>Released: {movieData?.Released}</p>
-                <p>Runtime: {movieData?.Runtime}</p>
-                <p>Genre: {movieData?.Genre}</p>
-                <p>Director: {movieData?.Director}</p>
-                <p>Actors: {movieData?.Actors}</p>
-                <p>Plot: {movieData?.Plot}</p>
-            </div>
-            <button type='submit' id='cross' onClick={ () =>props.onMovieSelect()}>X</button>
-        </div></> : "Loading..."
+                movieData ?
+            <>
+                <div className="mainContainer">
+                    <div className='infoContainer'>
+                        <img src={movieData?.Poster} alt="Poster" />
+                        <div className='subData'>
+                            <h3>Name :{movieData?.Title}</h3>
+                            <p>IMDB Rating: {movieData?.imdbRating}</p>
+                            <p>Year: {movieData?.Year}</p>
+                            <p>Laungage: {movieData?.Language}</p>
+                            <p>Rated: {movieData?.Rated}</p>
+                            <p>Released: {movieData?.Released}</p>
+                            <p>Runtime: {movieData?.Runtime}</p>
+                            <p>Genre: {movieData?.Genre}</p>
+                            <p>Director: {movieData?.Director}</p>
+                            <p>Actors: {movieData?.Actors}</p>
+                            <p>Plot: {movieData?.Plot}</p>
+                        </div>
+                        
+                    </div>
+                    <button type='submit' id='cross' onClick={ () =>props.onMovieSelect()}>X</button>
+                </div>
+            </> : "Loading..."
             }
         </>
     )

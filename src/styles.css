@@ -113,6 +113,11 @@ h1{
 
 
 
+  .mainContainer{
+    display: flex;
+    border-bottom: 2px solid rgb(97, 95, 95);
+    margin-bottom: 20px;
+  }
   .infoContainer{
     width: 95vw;
     display: flex;
@@ -132,7 +137,9 @@ h1{
     height: 30px;
     border: 1px solid black;
     border-radius: 50%;
-    background-color: rgb(88, 88, 110);
+    background-color: rgb(135, 135, 172);
+    font-size: 20px;
+    font-weight: bold;
     cursor: pointer;
   }
 
@@ -232,6 +239,10 @@ h1{
     #movieLand{
       font-size: 20px;
     }
+
+    .infoContainer{
+      flex-direction: column;
+    }
   }
 
   @media only screen and (max-width: 400px)
@@ -272,6 +283,17 @@ h1{
     }
 
     #movieLand{
+      font-size: 10px;
+    }
+
+    .infoContainer{
+      flex-wrap: nowrap;
+      overflow: scroll;
+    }
+
+    #cross{
+      width: 20px;
+      height: 20px;
       font-size: 10px;
     }
   }
