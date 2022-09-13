@@ -23,17 +23,17 @@ function MovieInfo(props)
                     <div className='infoContainer'>
                         <img src={movieData?.Poster} alt="Poster" />
                         <div className='subData'>
-                            <h3>Name :{movieData?.Title}</h3>
-                            <p>IMDB Rating: {movieData?.imdbRating}</p>
-                            <p>Year: {movieData?.Year}</p>
-                            <p>Laungage: {movieData?.Language}</p>
-                            <p>Rated: {movieData?.Rated}</p>
-                            <p>Released: {movieData?.Released}</p>
-                            <p>Runtime: {movieData?.Runtime}</p>
-                            <p>Genre: {movieData?.Genre}</p>
-                            <p>Director: {movieData?.Director}</p>
-                            <p>Actors: {movieData?.Actors}</p>
-                            <p>Plot: {movieData?.Plot}</p>
+                            <h3><span className='span'>Name: </span>{movieData?.Title}</h3>
+                            <p><span className='span'>IMDB Rating: </span>{movieData?.imdbRating}</p>
+                            <p><span className='span'>Year: </span>{movieData?.Year}</p>
+                            <p><span className='span'>Laungage: </span>{movieData?.Language}</p>
+                            <p><span className='span'>Rated: </span>{movieData?.Rated}</p>
+                            <p><span className='span'>Released: </span>{movieData?.Released}</p>
+                            <p><span className='span'>Runtime: </span>{movieData?.Runtime}</p>
+                            <p><span className='span'>Genre: </span>{movieData?.Genre}</p>
+                            <p><span className='span'>Director: </span>{movieData?.Director}</p>
+                            <p><span className='span'>Actors: </span>{movieData?.Actors}</p>
+                            <p><span className='span'>Plot: </span>{movieData?.Plot}</p>
                         </div>
                         
                     </div>

@@ -29,7 +29,7 @@ export default function App() {
   return (
     <div className="App">
       <div className="header">
-        <h2 id="movieLand">Movie Bhandar</h2>
+        <h2 id="movieLand">Movie Search App</h2>
         <div className="searchPart">
           <img src={icon} alt="search icon" />
           <input

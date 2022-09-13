@@ -130,17 +130,23 @@ h1{
     align-items: flex-start;
     margin-left: 10px;
     flex-wrap: wrap;
+    text-align: left;
   }
 
   #cross{
     width: 40px;
-    height: 30px;
+    height: 40px;
     border: 1px solid black;
-    border-radius: 50%;
+    border-radius: 27%;
     background-color: rgb(135, 135, 172);
     font-size: 20px;
     font-weight: bold;
+    margin: 10px 3px 0 0;
     cursor: pointer;
+  }
+
+  .span{
+    font-weight: 600;
   }
 
 
@@ -245,7 +251,7 @@ h1{
     }
   }
 
-  @media only screen and (max-width: 400px)
+  @media only screen and (max-width: 412px)
   {
       .searchPart{
         width: 180px;
